@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = '⋆ ˚｡⋆My Website⋆˚｡⋆';
 ---
 
 <html lang="en">
@@ -8,15 +8,26 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>⋆ ˚｡⋆My Website⋆˚｡⋆</title>
+		<title>{ pageTitle }</title>
+
+		<link rel="stylesheet" href="https://unpkg.com/open-props"/>
 
 		<style>
 			body{
-			background: slategrey;
+			background: var(--gradient-19);
+			height: 100vh;
+			}
+
+			h1{
+			color:white;
+			text-align: center;
+			animation: var(--animation-spin);
 			}
 		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>{ pageTitle }</h1>
+
+		<footer>{pageTitle}</footer>
 	</body>
 </html>
